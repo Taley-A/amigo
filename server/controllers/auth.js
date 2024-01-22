@@ -14,7 +14,8 @@ export const register = async (request, response) => {
       friends,
       occupation,
       location,
-    } = req.body
+    } = request.body
+    console.log(firstName)
 
     // encryption for password
     const salt = await bcrypt.genSalt
